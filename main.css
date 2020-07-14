@@ -7,14 +7,20 @@
     --tangerine: #F7987F;
     --white: #FFFFFF;
     --grape: #8B7A92;
+    --deepgrape: #25233C;
 }
 
 /* Global Styles */
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--grape) !important;
-    font-family: 'Roboto'!important;
+    /* background-color: var(--grape) !important; */
+    background:
+    -webkit-linear-gradient(
+        var(--grape),
+        var(--deepgrape)
+    ) !important;
+    font-family: 'Sarabun'!important;
     color: var(--white) !important;
 }
 
@@ -32,21 +38,39 @@ body {
 .nav-link {
     margin-right: 1em !important;
 }
+li > a:after{
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--lemon);
+    transform: scaleX(0);
+    transition: transform .3s;
+}
+li > a:hover:after{
+    transform: scaleX(1);
+    transition: transform .3s;
+}
+/* .active{
+    color: var(--white) !important;
+} */
 
 .nav-link:hover {
-    color: grey;
-    /* change this */
+    color: var(--white);
 }
 
 .navbar-collapse {
     justify-content: flex-end;
 }
 
+img {
+    max-width: 20%;
+}
+
 /* Splash Page */
 .description {
     left: 25%;
     position: absolute;
-    top: 40%;
+    top: 42%;
     transform: translate(-50%, -55%);
     text-align: left;
   }
@@ -58,14 +82,26 @@ body {
     font-size: 1em;
   }
 
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5%;
+  }
+
   .rectangle {
-    height: 130px;
+    height: 125px;
     opacity: 0.90;
     width: 100%;
     background-color: rgb(139,122,146,0.8);
     position: absolute;
     top: 100%;
-    transform: translate(0%, -95%);
+    transform: translate(0%, -100%);
   }
 
 /* Gradient Sunset */
@@ -159,3 +195,12 @@ position: relative;
           box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
         }
       } */
+
+      .about {
+          padding-left: 50%;
+          margin-right: 30px;
+      }
+
+      .quick-description {
+          font-family: 'Roboto';
+      }
