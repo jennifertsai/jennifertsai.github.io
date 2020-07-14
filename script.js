@@ -1,3 +1,4 @@
+// Change Nav Colour When Scrolled
 $(function () {
     $(document).scroll(function () {
       var $nav = $(".navbar");
