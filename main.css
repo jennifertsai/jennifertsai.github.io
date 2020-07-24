@@ -6,7 +6,7 @@
     --lemon: #F7AF7E;
     --tangerine: #F7987F;
     --white: #FFFFFF;
-    --grape: #8B7A92;
+    --grape: #876E8D;
     --deepgrape: #25233C;
 }
 
@@ -62,22 +62,30 @@ li > a:hover:after{
     justify-content: flex-end;
 }
 
-img {
+.logo {
     width: 120px;
     height: 60px;
 }
 
 /* Splash Page */
 .description {
-    left: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
     position: absolute;
-    top: 42%;
-    transform: translate(-50%, -55%);
+    top: 30%;
     text-align: left;
   }
+  @media only screen and (max-width: 600px) {
+    .description {
+      text-align: center;
+      top: 25%;
+    }
+  }
+
   .description h1 {
     color: var(--white);
   }
+
   .description p {
     color: var(--white);
     font-size: 1em;
@@ -186,11 +194,72 @@ position: relative;
         }
       } */
 
+      /* About Page */
       .about {
-          padding-left: 50%;
-          margin-right: 30px;
+        margin-top: 10%;
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+      
+      .social-media {
+        margin-top: 5%;
       }
 
-      .quick-description {
-          font-family: 'Roboto';
+      .resume {
+        background-color: var(--peach);
+        border: none;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        /* text-decoration: none; */
+        display: inline-block;
+        font-size: 0.75em;
+        /* margin: 4px 2px; */
+      
       }
+
+      .hello {
+        /* margin-left: 5% !important;
+        margin-right: 5% !important; */
+      }
+
+      p {
+        font-family: 'Roboto';
+        font-size: 0.9em;
+    }
+/* Projects */
+    .featured-projects {
+      margin-top: 5%;
+    }
+
+    .featured-projects h2 {
+      padding-bottom: 0.5em;
+    }
+    
+    .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      margin-left: 1%;
+      border: none !important;
+    }
+    
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    }
+    
+    /* Add some padding inside the card container */
+    .container {
+      padding: 2px 16px;
+    }
+
+    .card h5 {
+      color: black;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .card p {
+      color: var(--cherry);
+      font-weight: 600;
+    }
