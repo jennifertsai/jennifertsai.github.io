@@ -7,7 +7,7 @@
     --tangerine: #F7987F;
     --white: #FFFFFF;
     --grape: #876E8D;
-    --deepgrape: #25233C;
+    --deepgrape: #564C65;
 }
 
 /* Global Styles */
@@ -197,15 +197,16 @@ position: relative;
       /* About Page */
       .about {
         margin-top: 10%;
-        margin-left: 15%;
-        margin-right: 15%;
+        /* margin-left: 15%;
+        margin-right: 15%; */
       }
       
-      .social-media {
+      .about-me-buttons {
         margin-top: 5%;
+    
       }
 
-      .resume {
+      .resume, .more-about-me, .all-projects {
         background-color: var(--peach);
         border: none;
         color: white;
@@ -214,33 +215,37 @@ position: relative;
         /* text-decoration: none; */
         display: inline-block;
         font-size: 0.75em;
+        /* margin-left: 40px; */
         /* margin: 4px 2px; */
       
       }
 
-      .hello {
-        /* margin-left: 5% !important;
-        margin-right: 5% !important; */
+      .all-projects {
+        float: right;
       }
+
+
 
       p {
         font-family: 'Roboto';
         font-size: 0.9em;
     }
+
+    .sunset-description, .core-focusses {
+      background-color: #FFE1DF;
+      color: var(--cherry);
+    }
 /* Projects */
     .featured-projects {
       margin-top: 5%;
+      margin-bottom: 7%;
     }
 
-    .featured-projects h2 {
-      padding-bottom: 0.5em;
-    }
-    
     .featured-projects h3 {
       float: right;
       font-size: 1em;
     }
-    .card {
+    .featured-projects .card {
       /* Add shadows to create the "card" effect */
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
@@ -249,7 +254,7 @@ position: relative;
     }
     
     /* On mouse-over, add a deeper shadow */
-    .card:hover {
+    .featured-projects .card:hover {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
     }
     
@@ -267,14 +272,14 @@ position: relative;
       color: var(--cherry);
       font-weight: 600;
     }
-
+/* 
     mark {
       display: inline-block;
-      line-height: 0.25em;
-      padding-bottom: 0.5em;
+      line-height: 0.2em;
+      padding-bottom: 2.5em;
       color: white;
       background-color: var(--watermelon) !important;
-    }
+    } */
 
     /* Focusses */
     .core-focusses {
@@ -288,7 +293,105 @@ position: relative;
 
     }
 
-    footer {
-      margin: 0 !important;
-      padding: 0 !important;
+
+    .inner {
+      width: 75%;
+      margin: 0 auto;
     }
+    .inner-1 {
+      width: 65%;
+      margin: 0 auto;
+    }
+
+
+.hello {
+ 
+    /* background: linear-gradient(to bottom, var(--grape) 0%,var(--grape) 80%,var(--grape) 80%,#FFE3E3 80%,#FFE3E3 100%); */
+    background: var(--grape);
+    
+}
+
+.sunset-description {
+  margin-top: 5%;
+}
+
+.sunset-description p {
+  padding-bottom: 5%;
+}
+
+
+.hello p {
+  padding-top: 1em;
+}
+
+.highlight {
+  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--watermelon) 65%);
+}
+
+.featured-projects h2, .featured-projects h4, .check-this-out h2 {
+  text-align: center;
+}
+
+.core-focusses .card {
+  background-color: var(--cherry) !important;
+  margin-top: 2%;
+  border: none !important;
+  border-radius: 0 !important;
+  
+}
+
+.core-focusses .card .card-pink {
+  background-color: var(--watermelon) !important;
+
+}
+
+.core-focusses a, .core-focusses a:hover {
+  color: white;
+}
+
+.core-focusses .collapse {
+  background-color: #FFE1DF;
+}
+
+.core-focusses h2 {
+  padding-top: 3%;
+}
+
+.core-focusses .container-fluid {
+  padding-bottom: 3%;
+  padding-top: 2%;
+}
+
+.check-this-out .card {
+  background-color: var(--deepgrape) !important;
+  margin-top: 2%;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.check-this-out .card h5 {
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.check-this-out {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.page-footer {
+  background-color: var(--peach);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+
+.page-footer .row {
+  padding-top: 0 !important;
+}
