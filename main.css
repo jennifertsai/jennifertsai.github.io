@@ -6,7 +6,7 @@
     --lemon: #F7AF7E;
     --tangerine: #F7987F;
     --white: #FFFFFF;
-    --grape: #876E8D;
+    --grape: #8E85A6;
     --deepgrape: #564C65;
 }
 
@@ -96,7 +96,7 @@ li > a:hover:after{
     height: 125px;
     opacity: 0.90;
     width: 100%;
-    background-color: rgb(55,81,150,0.65);
+    background-color: rgb(73, 104, 185, 0.6);
     position: absolute;
     top: 100%;
     transform: translate(0%, -100%);
@@ -419,3 +419,4 @@ position: relative;
   top: 50%; 
   transform: translateY(-50%);
 }
+
