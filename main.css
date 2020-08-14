@@ -229,6 +229,15 @@ li > a:hover:after{
   margin-top: 10%;
 }
 
+@media only screen and (max-width: 600px) {
+  .about {
+    margin-top: 15%;
+  }
+  .hello h2 {
+    margin-top: 5%;
+  }
+}
+
 .hello p, .sunset-description p, .featured-projects .row {
   padding-top: 1em;
 }
@@ -241,6 +250,13 @@ li > a:hover:after{
 /* Buttons */
 .about-me-buttons {
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-buttons {
+    margin-bottom: 5%;
+  }
+  
 }
 
 
