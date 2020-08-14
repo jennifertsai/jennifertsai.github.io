@@ -8,6 +8,10 @@
     --white: #FFFFFF;
     --grape: #99809d;
     --deepgrape: #564C65;
+    --oceanblue: rgb(73, 104, 185, 0.6);
+    --blushpink: #FFE1DF;
+    --highlightorange: #FFD0AE;
+    --highlightpink:rgba(234,87,104,0.85);
 }
 
 /* Global Styles */
@@ -15,16 +19,57 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--grape) !important;
-    /* background:
-    -webkit-linear-gradient(
-        var(--grape),
-        var(--deepgrape)
-    ) !important; */
     font-family: 'Sarabun'!important;
-    color: white !important;
+    color: var(--white) !important;
 }
 
-/* Navigation and Footer Bar */
+p {
+  font-family: 'Roboto';
+  font-size: 0.9em;
+}
+
+.highlight {
+  background: 
+  linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--highlightpink) 65%);
+}
+
+.highlight-orange {
+  background: 
+  linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--highlightorange) 65%);
+}
+
+.wave-container {
+  position: relative;
+  color: var(--white);
+  text-align: center;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.inner {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .inner {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+.padding-0{
+  padding-right:0;
+  padding-left:0;
+}
+
+.sunset-description, .core-focusses {
+  background-color: var(--blushpink);
+  color: var(--cherry);
+}
+
+/* Navigation Bar */
 .navbar.scrolled {
     background-color: var(--tangerine) !important;
     transition: background-color 200ms linear;
@@ -50,9 +95,6 @@ li > a:hover:after{
     transform: scaleX(1);
     transition: transform .3s;
 }
-/* .active{
-    color: var(--white) !important;
-} */
 
 .nav-link:hover {
     color: var(--white);
@@ -75,10 +117,12 @@ li > a:hover:after{
     top: 30%;
     text-align: left;
   }
+
   @media only screen and (max-width: 600px) {
     .description {
       text-align: center;
       top: 25%;
+
     }
   }
 
@@ -96,7 +140,7 @@ li > a:hover:after{
     height: 125px;
     opacity: 0.90;
     width: 100%;
-    background-color: rgb(73, 104, 185, 0.6);
+    background-color: var(--oceanblue);
     position: absolute;
     top: 100%;
     transform: translate(0%, -100%);
@@ -123,27 +167,26 @@ li > a:hover:after{
 
 /* The Sun */
 .sun-outer {
-height: 240px;
-width: 240px;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 50%;
-display: inline-block;
-position: absolute;
-transform: translate(0%, -100%);
-top: 100%;
-left: 0;
-right: 0;
-margin: auto;
+  height: 240px;
+  width: 240px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  transform: translate(0%, -100%);
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .sun-inner-1 {
-background: rgba(255, 255, 255, 0.4);
-border-radius: 50%;
-top: 15%; left:15%;
-width:70%; 
-height:70%; 
-position: relative;
-
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  top: 15%; left:15%;
+  width:70%; 
+  height:70%; 
+  position: relative;
 }
 
 .sun-inner-2 {
@@ -155,173 +198,39 @@ position: relative;
     position: relative;
 }
 
-    /* Pulsing Animation */
-    .pulse {
-        animation: pulse-animation 2.5s infinite;
-      }
-      
-      @keyframes pulse-animation {
-        0% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
-        }
-        100% {
-          box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
-        }
-      }
-    .pulse-1 {
-        animation: pulse-animation-1 2.5s infinite;
-      }
-      
-      @keyframes pulse-animation-1 {
-        0% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
-        }
-        100% {
-          box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
-        }
-      }
-/* 
-    .pulse-2 {
-        animation: pulse-animation-2 2.5s infinite;
-      }
-      
-      @keyframes pulse-animation-2 {
-        0% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 1);
-        }
-        100% {
-          box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
-        }
-      } */
-
-      /* About Page */
-      .about {
-        margin-top: 10%;
-        /* margin-left: 15%;
-        margin-right: 15%; */
-      }
-      
-      .about-me-buttons {
-        margin-top: 5%;
-    
-      }
-
-      .resume, .more-about-me, .all-projects {
-        background-color: var(--peach);
-        border: none;
-        color: white;
-        padding: 15px;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 2px 2px grey;
-        /* text-decoration: none; */
-        display: inline-block;
-        font-size: 0.75em;
-        /* margin-left: 40px; */
-        /* margin: 4px 2px; */
-      
-      }
-
-      .all-projects {
-        float: right;
-      }
-
-
-
-      p {
-        font-family: 'Roboto';
-        font-size: 0.9em;
+/* Pulsing Animation */
+.pulse {
+    animation: pulse-animation 2.5s infinite;
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
     }
-
-    .sunset-description, .core-focusses {
-      background-color: #FFE1DF;
-      color: var(--cherry);
+    100% {
+      box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
     }
-/* Projects */
-    .featured-projects {
-      margin-top: 5%;
-      margin-bottom: 7%;
+  }
+.pulse-1 {
+    animation: pulse-animation-1 2.5s infinite;
+  }
+  
+  @keyframes pulse-animation-1 {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.4);
     }
-
-    .featured-projects h3 {
-      float: right;
-      font-size: 1em;
+    100% {
+      box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);
     }
-    .featured-projects .card {
-      /* Add shadows to create the "card" effect */
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      transition: 0.3s;
-      margin-left: 1%;
-      border: none !important;
-      
-    }
-    
-    /* On mouse-over, add a deeper shadow */
-    .featured-projects .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    }
-    
-    /* Add some padding inside the card container */
-    .container {
-      padding: 2px 16px;
-    }
+  }
 
-    .featured-projects .card h5 {
-      color: black;
-      font-size: 1em;
-      font-family: Roboto;
-      font-weight: 600;
-    }
-    .featured-projects .card p {
-      color: var(--cherry);
-      font-weight: 600;
-    }
-
-    .core-focusses .card p {
-    
-        color: var(--cherry);
-        
-      
-    }
-/* 
-    mark {
-      display: inline-block;
-      line-height: 0.2em;
-      padding-bottom: 2.5em;
-      color: white;
-      background-color: var(--watermelon) !important;
-    } */
-
-    /* Focusses */
- 
-
-    .page-footer {
-      background-color: var(--deepgrape);
-      margin: 0 !important;
-      padding: 0 !important;
-
-    }
-
-
-    .inner {
-      width: 75%;
-      margin: 0 auto;
-    }
-    /* .inner-1 {
-      width: 75%;
-      margin: 0 auto;
-    } */
-
-
-.hello {
- 
-    /* background: linear-gradient(to bottom, var(--grape) 0%,var(--grape) 80%,var(--grape) 80%,#FFE3E3 80%,#FFE3E3 100%); */
-    background: var(--grape);
-    
+/* About Page */
+.about {
+  margin-top: 10%;
 }
 
-.sunset-description {
-  /* margin-top: 5%; */
+.hello p, .sunset-description p, .featured-projects .row {
+  padding-top: 1em;
 }
 
 .sunset-description p {
@@ -329,21 +238,80 @@ position: relative;
   margin: 0 !important;
 }
 
-
-.hello p {
-  padding-top: 1em;
+/* Buttons */
+.about-me-buttons {
+  text-align: center;
 }
 
-.highlight {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, rgba(234,87,104,0.85) 65%);
+
+.resume, .more-about-me, .all-projects {
+  background-color: var(--peach);
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  margin-top: 1em;
+  
 }
 
-.highlight-orange {
-  background: linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%);
+.resume:hover, .more-about-me:hover, .all-projects:hover {
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
+  color: white;
+}
+
+
+.all-projects {
+  float: right;
+}
+
+/* Projects */
+.featured-projects {
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+
+.featured-projects h3 {
+  float: right;
+  font-size: 1em;
+}
+.featured-projects .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left: 1%;
+  border: none !important; 
+}
+
+.featured-projects .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.featured-projects .card h5 {
+  color: black;
+  font-size: 1em;
+  font-family: Roboto;
+  font-weight: 600;
+}
+
+.featured-projects .card p {
+  color: var(--cherry);
+  font-weight: 600;
 }
 
 .featured-projects h2, .featured-projects h4, .check-this-out h2 {
   text-align: center;
+}
+
+/* Focusses */
+.core-focusses .card p {
+  color: var(--cherry);
+}
+
+.focus-image {
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
 }
 
 .core-focusses .card {
@@ -351,13 +319,11 @@ position: relative;
   margin-top: 2%;
   border: none !important;
   border-radius: 10px;
-  
 }
 
 .core-focusses .card .card-pink {
   background-color: var(--cherry) !important;
   border-radius: 10px;
-
 }
 
 .core-focusses a, .core-focusses a:hover {
@@ -365,7 +331,7 @@ position: relative;
 }
 
 .core-focusses .collapse {
-  background-color: #FFE1DF;
+  background-color: var(--blushpink);
 }
 
 .core-focusses h2 {
@@ -377,6 +343,7 @@ position: relative;
   padding-top: 2%;
 }
 
+/* Check This Out  */
 .check-this-out .card {
   background-color: var(--deepgrape) !important;
   margin-top: 2%;
@@ -401,35 +368,13 @@ position: relative;
   margin-bottom: 5%;
 }
 
+/* Footer  */
 .page-footer {
   background-color: var(--peach);
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.padding-0{
-  padding-right:0;
-  padding-left:0;
-}
-
 .page-footer .row {
-  width: 100%; /* self explanatory */
-  
+  width: 100%; 
 }
-
-.focus-image {
-  position: relative;
-  top: 50%; 
-  transform: translateY(-50%);
-}
-
-.wave-container {
-  position: relative;
-  /* background: #09F; */
-  color: #FFF;
-  text-align: center;
-  overflow: hidden;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
