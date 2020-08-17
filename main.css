@@ -11,7 +11,7 @@
     --oceanblue: rgb(73, 104, 185, 0.6);
     --blushpink: #FFE1DF;
     --highlightorange: #FFD0AE;
-    --highlightpink:rgba(234,87,104,0.85);
+    --highlightpink:rgba(234,87,104,0.6);
 }
 
 /* Global Styles */
@@ -238,7 +238,7 @@ li > a:hover:after{
   }
 }
 
-.hello p, .sunset-description p, .featured-projects .row {
+.hello p, .sunset-description p, .featured-projects .row, .check-this-out .row {
   padding-top: 1em;
 }
 
@@ -284,6 +284,16 @@ li > a:hover:after{
   margin-bottom: 7%;
 }
 
+mark {
+  background-color: var(--cherry) !important;
+  color: white;
+}
+
+.featured-projects h4 {
+  font-size: 1em;
+  text-align: center;
+}
+
 .featured-projects h3 {
   float: right;
   font-size: 1em;
@@ -293,6 +303,11 @@ li > a:hover:after{
   transition: 0.3s;
   margin-left: 1%;
   border: none !important; 
+  border-radius: 0 !important;
+}
+
+.featured-projects .card-img-top {
+  border-radius: 0 !important;
 }
 
 .featured-projects .card:hover {
@@ -303,16 +318,31 @@ li > a:hover:after{
   padding: 2px 16px;
 }
 
+.featured-projects .card h6 {
+  color: var(--cherry);
+  font-size: 0.6em;
+  font-weight: 600;
+  font-family: 'Sarabun';
+}
+
 .featured-projects .card h5 {
   color: black;
   font-size: 1em;
-  font-family: Roboto;
+  font-family: 'Sarabun';
   font-weight: 600;
 }
 
 .featured-projects .card p {
-  color: var(--cherry);
+  color: black;
+  font-size: 0.6em;
   font-weight: 600;
+}
+
+.featured-projects .card .card-link {
+  color: black;
+  font-size: 0.5em;
+  font-weight: 600;
+  text-align: right;
 }
 
 .featured-projects h2, .featured-projects h4, .check-this-out h2 {
@@ -322,6 +352,7 @@ li > a:hover:after{
 /* Focusses */
 .core-focusses .card p {
   color: var(--cherry);
+  font-size: 0.7em;
 }
 
 .focus-image {
@@ -361,22 +392,38 @@ li > a:hover:after{
 
 /* Check This Out  */
 .check-this-out .card {
-  background-color: var(--deepgrape) !important;
+  background-color: white; !important;
   margin-top: 2%;
   border: none !important;
-  border-radius: 10px;
+  border-radius: 0px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
  
 }
 
-.check-this-out .row {
-  text-align: center;
+.check-this-out .card-img-top {
+  border-radius: 0 !important;
 }
 
+
+
 .check-this-out .card h5 {
-  color: white;
+  color: var(--cherry);
   text-align: center;
-  font-size: 1em;
-  font-weight: 200;
+  font-size: 1.25 em;
+  font-weight: 600;
+}
+
+.check-this-out .card p {
+  color: black;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.6em;
+}
+
+.check-this-out .btn {
+  background-color: var(--peach);
+  color: white;
 }
 
 .check-this-out {
@@ -394,3 +441,7 @@ li > a:hover:after{
 .page-footer .row {
   width: 100%; 
 }
+ /* Conclusion */
+ .conclusion {
+   padding-bottom: 3em;
+ }
