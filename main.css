@@ -75,15 +75,15 @@ p {
     transition: background-color 200ms linear;
   }
 
-.nav-link, .navbar-brand {
+.splash .nav-link, .navbar-brand {
     color: var(--white);
     cursor: pointer;
 }
 
-.nav-link {
+.splash .nav-link {
     margin-right: 1em !important;
 }
-li > a:after{
+.splash li > a:after{
     content: '';
     display: block;
     height: 5px;
@@ -336,6 +336,7 @@ mark {
   color: black;
   font-size: 0.6em;
   font-weight: 600;
+ 
 }
 
 .featured-projects .card .card-link {
@@ -445,3 +446,17 @@ mark {
  .conclusion {
    padding-bottom: 3em;
  }
+
+.nav-pills a {
+  color: var(--cherry);
+  font-weight: 600;
+}
+
+a.active.nav-link{
+  background-color: var(--cherry) !important;
+}
+
+
+.tab-content p {
+  font-size: 0.75em;
+}
