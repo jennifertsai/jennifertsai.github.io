@@ -475,6 +475,10 @@ a.active.nav-link{
   padding-top: 6em;
 }
 
+.work-intro p {
+  padding-top: 1em;
+}
+
  .about-me, .all-work {
   margin-top: 3em;
   background-color: var(--blushpink);
@@ -495,6 +499,20 @@ a.active.nav-link{
  .work-intro a:hover {
    color: white;
    text-decoration: none;
+ }
+
+ .accomplishments h3 {
+   text-align: center;
+   padding-top: 2em;
+ }
+
+ .accomplishments .row {
+   margin-top: 2em;
+   margin-bottom: 2em;
+ }
+
+ .accomplishments li {
+   font-size: 0.75em;
  }
 
  /* Gallery */
@@ -518,4 +536,8 @@ h4 {
 }
 .lightbox-gallery .zoom:hover img {
   transform: scale(1.1);
+}
+
+.lightbox-gallery p {
+  padding-top: 1em;
 }
