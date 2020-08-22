@@ -295,15 +295,15 @@ mark {
   color: white;
 }
 
-.featured-projects h4 {
+.featured-projects h3 {
   font-size: 1em;
   text-align: center;
 }
 
-.featured-projects h3 {
+/* .featured-projects h3 {
   float: right;
   font-size: 1em;
-}
+} */
 
 .featured-projects .card, .all-work .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -353,7 +353,7 @@ mark {
   text-align: right;
 }
 
-.featured-projects h2, .featured-projects h4, .check-this-out h2 {
+.featured-projects h2, .featured-projects h3, .check-this-out h2 {
   text-align: center;
 }
 
@@ -496,3 +496,26 @@ a.active.nav-link{
    color: white;
    text-decoration: none;
  }
+
+ /* Gallery */
+.lightbox-gallery {
+  margin-top: 6em;
+  margin-bottom: 3em;
+}
+
+h4 {
+  color: var(--deepgrape) !important;
+  font-size: 1em !important;
+}
+
+.zoom {
+  width: 100%;
+  overflow: hidden;
+}
+.lightbox-gallery img {
+  max-width: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.lightbox-gallery .zoom:hover img {
+  transform: scale(1.1);
+}
