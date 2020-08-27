@@ -38,6 +38,14 @@ p {
   linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--highlightorange) 65%);
 }
 
+::-moz-selection { 
+  background-color: var(--highlightpink); 
+  color: #fff; 
+} 
+  ::selection { 
+    background-color: var(--highlightpink); 
+    color: #fff; 
+}
 .wave-container {
   position: relative;
   color: var(--white);
@@ -110,8 +118,8 @@ li > a:hover:after{
 }
 
 .logo {
-    width: 100px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
 }
 
 /* Splash Page */
@@ -479,7 +487,7 @@ a.active.nav-link{
   padding-top: 1em;
 }
 
- .about-me, .all-work {
+ .all-work {
   margin-top: 3em;
   background-color: var(--blushpink);
 }
@@ -540,4 +548,36 @@ h4 {
 
 .lightbox-gallery p {
   padding-top: 1em;
+}
+
+/* About  */
+.about-me h2 {
+  margin-top: 3em;
+
+}
+
+.about-me img {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  max-width: 100%;
+}
+
+.mission {
+  background-color: var(--blushpink);
+  color: var(--cherry);
+}
+
+.mission h3 {
+  margin: 0 !important;
+  line-height: 1.5;
+}
+
+.hobbies h2, .hobbies p {
+  text-align: center;
+  margin: 0 !important;
+}
+
+.hobbies .row p {
+  text-align: left;
+  margin-top: 2em !important;
 }
