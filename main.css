@@ -28,6 +28,7 @@ p {
   font-size: 0.9em;
 }
 
+
 .highlight {
   background: 
   linear-gradient(180deg, rgba(255,255,255,0) 65%, var(--highlightpink) 65%);
@@ -294,7 +295,7 @@ li > a:hover:after{
 /* Projects */
 .featured-projects {
   margin-top: 5%;
-  margin-bottom: 7%;
+  margin-bottom: 12%;
 
 }
 
@@ -350,7 +351,7 @@ mark {
 .featured-projects .card p, .all-work .card p {
   color: black;
   font-size: 0.6em;
-  font-weight: 600;
+  font-weight: 500;
  
 }
 
@@ -371,7 +372,7 @@ mark {
   font-size: 0.7em;
 }
 
-.focus-image {
+.focus-image, .tab-content p {
   position: relative;
   top: 50%; 
   transform: translateY(-50%);
@@ -414,13 +415,12 @@ a.active.nav-link{
 }
 /* Check This Out  */
 .check-this-out .card {
-  background-color: white; !important;
+
+  background-color: white !important;
   margin-top: 2%;
   border: none !important;
   border-radius: 0px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
- 
 }
 
 .check-this-out .card-img-top {
@@ -439,7 +439,7 @@ a.active.nav-link{
 .check-this-out .card p {
   color: black;
   text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.6em;
 }
 
@@ -460,19 +460,14 @@ a.active.nav-link{
 }
 
 .page-footer .row {
-  width: 100%; 
-}
-
-.socials {
   padding-top: 1em;
   padding-bottom: 1em;
-  justify-content: center;
 }
 
-.socials img {
-  width: 1.75em;
-  margin: 0 0.5em;
+.socials a, .socials i {
+  color: white;
 }
+
  /* Conclusion */
  .conclusion {
    padding-bottom: 3em;
@@ -489,9 +484,8 @@ a.active.nav-link{
 
  .all-work {
   margin-top: 3em;
-  background-color: var(--blushpink);
-}
-
+  background: var(--blushpink);
+ }
 
 .all-work h3 {
   color: var(--cherry);
@@ -517,10 +511,13 @@ a.active.nav-link{
  .accomplishments .row {
    margin-top: 2em;
    margin-bottom: 2em;
+ 
+   justify-content: center;
  }
 
  .accomplishments li {
-   font-size: 0.75em;
+   font-size: 0.8em;
+   margin-bottom: 0.8em;
  }
 
  /* Gallery */
@@ -553,7 +550,7 @@ h4 {
 /* About  */
 .about-me h2 {
   margin-top: 3em;
-
+  padding-bottom: 1em;
 }
 
 .about-me img {
@@ -570,14 +567,4 @@ h4 {
 .mission h3 {
   margin: 0 !important;
   line-height: 1.5;
-}
-
-.hobbies h2, .hobbies p {
-  text-align: center;
-  margin: 0 !important;
-}
-
-.hobbies .row p {
-  text-align: left;
-  margin-top: 2em !important;
 }
