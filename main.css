@@ -93,6 +93,13 @@ p {
     color: var(--white);
     cursor: pointer;
 }
+@media only screen and (max-width: 767px) {
+  .navbar-collapse {
+    background-color:var(--tangerine);
+    padding-left: 2em;
+  }
+}
+
 
 .splash .nav-link {
     margin-right: 1em !important;
