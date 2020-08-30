@@ -28,6 +28,10 @@ p {
   font-size: 0.9em;
 }
 
+.btn:focus {
+  /* outline: none !important; */
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1) !important;
+}
 
 .highlight {
   background: 
