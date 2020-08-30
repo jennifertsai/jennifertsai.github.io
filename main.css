@@ -502,7 +502,6 @@ a.active.nav-link{
 }
 
  .all-work {
-  margin-top: 4em;
   background: var(--blushpink);
  }
 
@@ -524,7 +523,7 @@ a.active.nav-link{
 
  .accomplishments h3 {
    text-align: center;
-   padding-top: 2em;
+   padding-top: 1em;
  }
 
  .accomplishments .row {
