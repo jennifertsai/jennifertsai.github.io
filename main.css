@@ -18,14 +18,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--grape) !important;
-    font-family: 'Sarabun'!important;
-    color: var(--white) !important;
+    background-color: #FFF0E1 !important;
+    font-family: 'Cardo'!important;
+    color: var(--cherry) !important;
 }
 
-p {
-  font-family: 'Roboto';
-  font-size: 0.9em;
+p, li {
+  font-family: 'Cardo';
+  font-size: 1.2em;
 }
 
 .btn:focus {
@@ -61,7 +61,7 @@ p {
 }
 
 .inner {
-  width: 75%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -88,18 +88,19 @@ p {
 }
 
 /* Navigation Bar */
-.navbar.scrolled {
-    background-color: var(--tangerine) !important;
-    transition: background-color 200ms linear;
-  }
+.nav-item, .navbar-brand {
+  font-size: 1.5em !important
+}
 
 .splash .nav-link, .navbar-brand {
     color: var(--white);
     cursor: pointer;
+    padding-left: 1em;
+    padding-right: 1em;;
 }
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
-    background-color:var(--tangerine);
+ 
     padding-left: 2em;
   }
 }
@@ -108,20 +109,10 @@ p {
 .splash .nav-link {
     margin-right: 1em !important;
 }
-.splash li > a:after{
-    content: '';
-    display: block;
-    height: 5px;
-    background: var(--lemon);
-    transform: scaleX(0);
-    transition: transform .3s;
-}
-li > a:hover:after{
-    transform: scaleX(1);
-    transition: transform .3s;
-}
 
-.nav-link:hover {
+
+
+.nav-link:hover, .navbar-brand:hover {
     color: var(--white);
 }
 
@@ -152,36 +143,37 @@ li > a:hover:after{
   }
 
   .description h1 {
+    font-size: 3em;
     color: var(--white);
   }
 
   .description p {
     color: var(--white);
-    font-size: 1em;
+    font-size: 1.4em;
   }
 
 /* Ocean */
   .rectangle {
     height: 125px;
-    opacity: 0.90;
+    opacity: 1;
     width: 100%;
-    background-color: var(--oceanblue);
+    background-color: #FFF0E1;
     position: absolute;
-    top: 100%;
+    top: 50%;
     transform: translate(0%, -100%);
   }
 
 /* Gradient Sunset */
 .header {
-    height:100vh;
+    height: 40vh;
     width: 100%;
     background: 
     -webkit-linear-gradient(
-        var(--cherry), 
         var(--watermelon), 
         var(--peach), 
-        var(--lemon), 
+        var(--lemon),
         var(--tangerine)
+
     );
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -199,7 +191,7 @@ li > a:hover:after{
   display: inline-block;
   position: absolute;
   transform: translate(0%, -100%);
-  top: 100%;
+  top: 50%;
   left: 0;
   right: 0;
   margin: auto;
@@ -251,7 +243,7 @@ li > a:hover:after{
 
 /* About Page */
 .about {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -285,19 +277,6 @@ li > a:hover:after{
 }
 
 
-.resume-btn, .more-about-me-btn, .all-projects-btn {
-  background-color: var(--peach);
-  color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
-  margin-top: 1em;
-  
-}
-
-.resume-btn:hover, .more-about-me-btn:hover, .all-projects-btn:hover {
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.3);
-  color: white;
-}
-
 
 .all-projects-btn {
   float: right;
@@ -323,160 +302,9 @@ mark {
   color: white;
 }
 
-.featured-projects h3 {
-  font-size: 1em;
-  text-align: center;
-}
-
-/* .featured-projects h3 {
-  float: right;
-  font-size: 1em;
-} */
-
-.featured-projects .card, .all-work .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  margin-left: 1%;
-  border: none !important; 
-  border-radius: 0 !important;
-}
-
-.featured-projects .card-img-top, .all-work .card-img-top {
-  border-radius: 0 !important;
-}
-
-.featured-projects .card:hover, .all-work .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-.featured-projects .card h6, .all-work .card h6 {
-  color: var(--cherry);
-  font-size: 0.6em;
-  font-weight: 600;
-  font-family: 'Sarabun';
-}
-
-.featured-projects .card h5, .all-work .card h5 {
-  color: black;
-  font-size: 1em;
-  font-family: 'Sarabun';
-  font-weight: 600;
-}
-
-.featured-projects .card p, .all-work .card p {
-  color: black;
-  font-size: 0.6em;
-  font-weight: 500;
- 
-}
-
-.featured-projects .card .card-link, .all-work .card .card-link {
-  color: black;
-  font-size: 0.5em;
-  font-weight: 600;
-  text-align: right;
-}
-
-.featured-projects h2, .featured-projects h3, .check-this-out h2 {
-  text-align: center;
-}
-
-/* Focusses */
-.core-focusses .card p {
-  color: var(--cherry);
-  font-size: 0.7em;
-}
-
-.focus-image, .tab-content p {
-  position: relative;
-  top: 50%; 
-  transform: translateY(-50%);
-}
-
-.nav-pills a {
-  color: var(--cherry);
-  border: 5px;
-  font-weight: 600;
-}
-
-a.active.nav-link{
-  background-color: var(--cherry) !important;
-}
-
-
-.tab-content p {
-  font-size: 0.75em;
-}
-
-/* .core-focusses a, .core-focusses a:hover {
-  color: white;
-} */
-
-.core-focusses .collapse {
-  background-color: var(--blushpink);
-}
-
-.core-focusses h2 {
-  padding-top: 3%;
-}
-
-.core-focusses .container-fluid {
-  padding-bottom: 3%;
-  padding-top: 2%;
-}
-
-.core-focusses .nav {
-  padding-top: 3em;
-}
-/* Check This Out  */
-.check-this-out .card {
-
-  background-color: white !important;
-  margin-top: 2%;
-  border: none !important;
-  border-radius: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.check-this-out .card-img-top {
-  border-radius: 0 !important;
-}
-
-
-
-.check-this-out .card h5 {
-  color: var(--cherry);
-  text-align: center;
-  font-size: 1.25 em;
-  font-weight: 600;
-}
-
-.check-this-out .card p {
-  color: black;
-  text-align: left;
-  font-weight: 500;
-  font-size: 0.6em;
-}
-
-.check-this-out .btn {
-  background-color: var(--peach);
-  color: white;
-}
-
-.check-this-out {
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
 
 /* Footer  */
-.page-footer {
-  background-color: var(--grape);
-  margin: 0 !important;
-}
+
 
 .page-footer .row {
   padding-top: 1em;
@@ -484,14 +312,12 @@ a.active.nav-link{
 }
 
 .socials a, .socials i {
-  color: white;
+  color: var(--cherry);
 }
 
- /* Conclusion */
- .conclusion {
-   padding-bottom: 3em;
- }
-
+.footer-copyright {
+  font-size: 1.2em;
+}
  /* ------------------PROJECTS--------------------------- */
 .work-intro {
   padding-top: 6em;
@@ -538,32 +364,6 @@ a.active.nav-link{
    margin-bottom: 0.8em;
  }
 
- /* Gallery */
-.lightbox-gallery {
-  margin-top: 6em;
-  margin-bottom: 3em;
-}
-
-h4 {
-  color: var(--deepgrape) !important;
-  font-size: 1em !important;
-}
-
-.zoom {
-  width: 100%;
-  overflow: hidden;
-}
-.lightbox-gallery img {
-  max-width: 100%;
-  transition: transform 0.2s ease-in-out;
-}
-.lightbox-gallery .zoom:hover img {
-  transform: scale(1.1);
-}
-
-.lightbox-gallery p {
-  padding-top: 1em;
-}
 
 /* About  */
 .about-me h2 {
@@ -596,8 +396,3 @@ h4 {
   line-height: 1.5;
 }
 
-/* Blog */
-.blog-intro {
-  margin-top: 6em;
-  margin-bottom: 6em;
-}
